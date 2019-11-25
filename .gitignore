@@ -1,0 +1,16 @@
+*.env
+*.log
+*.checkpoint
+*.json
+*followed.txt
+*friends.txt
+*blacklist.txt
+*skipped.txt
+*unfollowed.txt
+*whitelist.txt
+*env
+*config
+*images
+*idea
+*comments.txt
+*.DS_Store
