@@ -1,8 +1,6 @@
 import requests
 from pathlib import Path
 
-Path('images').mkdir(parents=True,exist_ok=True)
-path = Path('images')
 
 def get_picture_format(image_url):
   split_url = image_url.split('.')
@@ -21,4 +19,11 @@ def get_image_from_hubble(image_id):
     filename.write(image_download.content)
 
 
-get_image_from_hubble('3811')
+if __name__ == "__main__":
+  Path('images').mkdir(parents=True, exist_ok=True)
+  path = Path('images')
+  url = 'http://hubblesite.org/api/v3/images/spacecraft?page=all'
+  responses = requests.get(url, verify=False)
+  for response in responses:
+    image_id = response[0]
+    get_image_from_hubble(image_id)
