@@ -11,6 +11,7 @@
 *env
 *config
 *images
-*idea
+*.idea
+*__pycache__
 *comments.txt
 *.DS_Store
