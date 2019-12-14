@@ -8,10 +8,10 @@
 *skipped.txt
 *unfollowed.txt
 *whitelist.txt
-*env
 *config
 *images
 *.idea
 *__pycache__
 *comments.txt
 *.DS_Store
+

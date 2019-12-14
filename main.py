@@ -8,10 +8,7 @@ import os
 
 
 path = './images'
-name_of_images = []
-for name_of_image  in listdir(path):
-  if isfile(joinpath(path,name_of_image)):
-    name_of_images.append(name_of_image)
+
 
 def get_croping_image(image):
     path_to_image = os.path.join(path,image)
@@ -31,13 +28,15 @@ def make_square_image():
 
 
 if __name__ == '__main__':
+  name_of_images = [name_of_image for name_of_image in listdir(path) if isfile(joinpath(path,name_of_image))]
+
   load_dotenv()
   secret_username = os.getenv('INSTAGRAM_USER_NAME')
   secret_password = os.getenv('INSTAGRAM_PASSWORD')
   bot = Bot()
   bot.login(username=secret_username, password=secret_password)
+  
   make_square_image()
   for image in name_of_images:
-
       bot.upload_photo(image ,caption= 'it is first photo')
       print(bot.api.last_response)
