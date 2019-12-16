@@ -26,6 +26,12 @@ def make_square_image(name_of_images):
         os.remove(os.path.join(PATH, image))
 
 def main():
+    load_dotenv()
+    secret_username = os.getenv('INSTAGRAM_USER_NAME')
+    secret_password = os.getenv('INSTAGRAM_PASSWORD')
+    bot = Bot()
+    bot.login(username=secret_username, password=secret_password)
+
     name_of_images = [name_of_image for name_of_image in listdir(PATH) if isfile(joinpath(PATH, name_of_image))]
     make_square_image(name_of_images)
     for image in name_of_images:
@@ -33,14 +39,11 @@ def main():
         print(bot.api.last_response)
 
 if __name__ == '__main__':
-  load_dotenv()
-  SECRET_USERNAME = os.getenv('INSTAGRAM_USER_NAME')
-  SECRET_PASSWORD = os.getenv('INSTAGRAM_PASSWORD')
+    main()
 
-  bot = Bot()
-  bot.login(username=SECRET_USERNAME, password=SECRET_PASSWORD)
 
-  main()
+  
+
 
 
   
