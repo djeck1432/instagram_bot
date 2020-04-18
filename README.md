@@ -3,23 +3,20 @@
 C помощью библиотеки ```instabot```, а также ```API``` : ```SpaceX``` и ```Hubble```,<br>
 мы будем загружать фотографии космоса, а так же, запуск ракет Fulcon.
 
-# Как установить 
+# How to install
+Python3 have to be already installed. Then use pip (or pip3, there is a contravention with Python2) to install dependencies: :<br>
 
-1)Откроем терминал(MacOs) или консоль(Linux) и с помощью терминала, установим репозиторий на наш компютер:
+``` git clone https://github.com/djeck1432/instagram_bot.git ```
 
-``` git clone https://github.com/djeck1432/instagram_bot.git```
-
-2)Откроем установленый репозиторий : 
+After you downloaded the repository open a folder ```instagram_bot``` using next command: <br>
 
 ```cd instagram_bot```
 
-3)Теперь, запустив виртуальное окружение, да бы избежать конфликта версий библиотек которые использует код с теми, которые уже у вас установлены:
+Now all of the required libraries and modules have to be installed:<br>
 
-````source env/bin/activate ````
+```pip install -r requirements.txt ```<br>
 
-4)После этого, осталось устнановить все необходимые библиотеки:
-
-```pip install -r requirements.txt ```
+Now we are ready for the script .
 
 # Как запустить 
 
