@@ -1,6 +1,6 @@
 # Загрузка фотографий в Instagram 
 
-C помощью библиотеки ```instabot```, а также ```API``` : ```SpaceX``` и ```Hubble```,<br>
+C помощью библиотеки `instabot`, а также `API` : `SpaceX` и `Hubble`,<br>
 мы будем загружать фотографии космоса, а так же, запуск ракет Fulcon.
 
 # How to install
