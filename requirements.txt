@@ -1,5 +1,5 @@
 instabot==0.73.0
 python-dotenv==0.10.3
-Pillow==6.2.1
+Pillow==8.1.1
 
 
